@@ -1,3 +1,7 @@
+Criar uma aplicação em Java para verificar se um número é par ou ímpar (pode-se incrementar o
+exemplo utilizando a classe Scanner).
+Separe a classe de lógica da execução.
+
 
 // Primeiro arquivo (App, onde o script roda)
 
