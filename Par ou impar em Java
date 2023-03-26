@@ -1,0 +1,37 @@
+Criar uma aplicação em Java para verificar se um número é par ou ímpar (pode-se incrementar o
+exemplo utilizando a classe Scanner).
+
+Separe a classe de lógica da execução.
+
+
+
+// Primeiro arquivo (App, onde o script roda)
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero = entrada.nextInt();
+
+        logica parOuImpar = new logica();
+        parOuImpar.verificarParOuImpar(numero);
+
+        entrada.close();
+    }
+}
+
+
+// Segundo aquivo (lógica)
+
+public class logica {
+    public void verificarParOuImpar(int valor){
+        if (valor    % 2 == 0){
+            System.out.println("Par");
+        }else{
+            System.out.println("Impar");
+        }
+    }
+    
+}
