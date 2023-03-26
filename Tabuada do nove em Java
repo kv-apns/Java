@@ -1,0 +1,38 @@
+Imprima a tabuada do 9 (até o décimo valor).
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        // Criação do objeto
+        logica tabuada = new logica();
+
+        System.out.println(tabuada.tabux());
+
+        
+    }
+    
+}
+
+
+
+// Segundo arquivo (lógica)
+
+
+public class logica {
+
+    int cont, n;
+
+    public String tabux(){
+        for (int n = 0; n < 10; n += 1){
+            cont = 9;
+
+            System.out.println(cont + " X " + n + " = " + (cont * n));
+
+        }
+        return "Fim";
+    }
+    
+}
