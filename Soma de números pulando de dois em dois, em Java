@@ -1,0 +1,41 @@
+Imprima a soma dos números de 1 a 100, pulando de dois em dois (1, 3, 5, 7, etc.).
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        // criação de objeto
+        logica zecem = new logica();
+
+        System.out.println(zecem.soma());
+        
+    }
+}
+
+
+// Segundo arquivo (lógica)
+
+
+public class logica {
+    
+    int n, cont;
+
+    public String soma() {
+
+        for (int n = 0; cont < 100; ++n){
+            cont += n;
+
+            if(cont > 100){
+            System.out.println(n + " Excedeu ");
+            System.out.println("Soma geral: " + (cont - n) +  "." + "O ultimo número foi: " + (n - 1));
+
+            }else{
+            System.out.println(n);
+
+            }
+        }
+        return "FIM";
+    }
+}
