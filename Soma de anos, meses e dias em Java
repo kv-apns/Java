@@ -1,0 +1,50 @@
+Faça um programa em Java que leia a idade de uma pessoa expressa em anos, meses e dias e
+mostre-a expressa em dias. Leve em consideração o ano com 365 dias e o mês com 30.
+(Ex: 3 anos, 2 meses e 15 dias = 1170 dias.)
+
+
+// Primeiro arquivo (App, onde o script roda)
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // anos
+        System.out.println("Anos: ");
+        int anos = scan.nextInt();
+
+        // meses 
+        System.out.println("Meses: ");
+        int meses = scan.nextInt();
+
+        // dias 
+        System.out.println("Dias: ");
+        int dias = scan.nextInt();
+
+        // objeto 
+        logica logic = new logica();
+        logic.somar(anos, meses, dias);
+       
+        System.out.println("O resultado é: "+ logic.resultado);
+
+        scan.close();
+
+
+
+    }
+}
+
+
+
+// Segundo arquivo (lógica)
+
+public class logica{
+    // declaração de variaveis 
+    int anos, meses, dias, resultado;
+
+    public void somar(int anos, int meses, int dias) {
+        resultado = anos * 365 + meses * 30 + dias;
+    }
+    
+}
