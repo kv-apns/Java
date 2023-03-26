@@ -1,0 +1,31 @@
+Imprima todos os números inteiros de 10 a 25 utilizando uma estrutura de repetição.
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        // criação do objeto 
+        logica dez_vinte5 = new logica();
+
+        System.out.print(dez_vinte5.soma());
+
+    }
+    
+}
+
+
+// Segundo arquivo (lógica)
+
+public class logica {
+    int x;
+
+    public String soma() {
+        // logica de contagem 
+        for (int x = 10; x <= 25; ++x){
+             System.out.println(x);
+        }
+        return "FIM";
+    }
+
+}
