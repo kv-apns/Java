@@ -1,0 +1,47 @@
+Um aluno tirou notas 8.5, 7.5 e 6.0 em provas que tinham peso 3, 2 e 5, respectivamente. Escreva
+um programa que imprima a média do aluno.
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner scan = new  Scanner(System.in);
+        // nota 1
+        System.out.print("Primeira nota: ");
+        double nota1 = scan.nextDouble();
+        
+        // nota 2
+        System.out.print("Segunda nota: ");
+        double nota2 = scan.nextDouble();
+
+        // nota 3
+        System.out.print("Terçeira nota: ");
+        double nota3 = scan.nextDouble();
+        
+        // criação do objeto 
+        logica logic = new logica();
+        logic.mediax(nota1, nota2, nota3);
+
+        System.out.println(logic.resultado);
+
+        scan.close();
+    }
+}
+
+
+// Segundo arquivo (lógica)
+
+public class logica {
+    double nota1, nota2, nota3, media;
+    String resultado;
+
+    public void mediax(double nota1, double nota2, double nota3){
+        media = ((nota1 * 3) + (nota2 * 2) + (nota3 * 5) / (3 + 2 + 5 ));
+        resultado = "Aprovado com: " + media;
+
+    }
+}
+
