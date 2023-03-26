@@ -1,0 +1,47 @@
+Faça uma aplicação em Java para calcular a média do estudante do IFPA, sendo que a nota para
+aprovação tem que ser maior ou igual a 7 e temos 2 avaliações por semestre.
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Digite um número maior que um, e descubra se é primo ou não: ");
+        int num  = scan.nextInt();
+
+        logica prim = new logica();
+        prim.primo(num);
+
+        System.out.println(prim.resultado);
+        
+        scan.close();
+    }
+    
+}
+
+
+
+// Segundo arquivo (lógica)
+
+public class logica {
+    
+    Double num, cont;
+    String resultado;
+
+    public void primo(int num){
+        for (int cont = num - 1; cont > 1; cont -- ) {
+            if (num %  cont == 0 ){
+                resultado = "Não é primo ";
+                cont = 2;
+
+            }else{
+                resultado = "É primo ";
+            }
+
+        }
+
+    }
+}
