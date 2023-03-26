@@ -1,0 +1,47 @@
+Faça uma aplicação em Java para calcular a média do estudante do IFPA, sendo que a nota para
+aprovação tem que ser maior ou igual a 7 e temos 2 avaliações por semestre.
+
+
+// Primeiro arquivo  (App, onde roda o script)
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Primeira nota: ");
+        Double prova1 = scan.nextDouble();
+
+        System.out.print("Segunda nota: ");
+        Double prova2 = scan.nextDouble();
+
+        logica med = new logica();
+        med.media(prova1,prova2);
+        System.out.print(med.resultado);
+        
+        scan.close();
+    }
+}
+
+
+
+// Segundo arquivo (lógica)
+
+public class logica {
+
+    Double media, prova1, prova2;
+    String resultado;
+
+    public void media(Double prova1, Double prova2){
+        media = (prova1 + prova2) / 2;
+
+        if (media >= 7){
+            resultado = "Passou, sua média foi: " + media;
+        }
+        else{
+            resultado = "Reprovou, sua média foi: " + media;
+        }
+    }
+    
+}
