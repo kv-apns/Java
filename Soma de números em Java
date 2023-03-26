@@ -1,0 +1,35 @@
+Começando em 0, imprima os números seguintes, enquanto a soma dos números já impressos
+for menor que 100.
+
+
+// Primeiro arquivo (App, onde roda o script)
+
+
+public class App {
+    public static void main(String[] args) {
+        logica  contar = new logica();
+
+        System.out.println(contar.soma());
+    }
+    
+}
+
+
+
+// Segundo arquivo (lógica)
+
+
+public class logica {
+    
+    int contar, n;
+
+    public String soma(){
+        for (int n = 1; n <= 100; n += 2){
+            contar += n;
+
+            System.out.println(contar);
+        }
+
+        return "FIM!";
+    }
+}
